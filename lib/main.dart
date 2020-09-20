@@ -1,5 +1,5 @@
-import 'package:flutterep11/screens/Ep701Page.dart';
-
+import './screens/Ep701Page.dart';
+import './screens/Ep711Page.dart';
 import './screens/Ep691Page.dart';
 import './screens/Ep681Page.dart';
 import './screens/Ep671Page.dart';
@@ -105,7 +105,7 @@ class MyApp extends StatelessWidget {
 //==============================================          
       SplashScreen(
       seconds: 3,
-      navigateAfterSeconds: MyHomePage(title: 'See-Flutter เรียนรู้ไปด้วยกัน EP61-70',),
+      navigateAfterSeconds: MyHomePage(title: 'See-Flutter เรียนรู้ไปด้วยกัน EP71-80',),
       title: Text('Welcome to See-Flutter',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0),),
       image: Image.asset('assets/icon/icon.png'),
       backgroundColor: Colors.orange,
@@ -161,6 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //============================================================
 // CREATE BUTTON
 //============================================================
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep711Page()),);},child: Text('EP71-1 - Code UI: Open Table - Home Page'),), 
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep701Page()),);},child: Text('EP70-1 - Plan Project, Agile, Scrum,Jira'),), 
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep691Page()),);},child: Text('EP69-1 - Design UI and Flow: Open Table'),), 
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep681Page()),);},child: Text('EP68-1 - How to develop E-menu & Design UI/Functions'),), 
