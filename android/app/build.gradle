@@ -47,10 +47,11 @@ android {
 // MUST SAME AS FIREBASE WEBSITE
 //=================================================      
         applicationId "com.example.flutterep41"
-//=================================================
-// //IF ERROR IN EP72, CHANGE 16 TO 18 (TO COMPATIBLE WITH BARCODE_SCAN (QR)
-//=================================================           
-        minSdkVersion 16        
+//==================================================================================================
+// //IF ERROR IN EP72, CHANGE 16 TO 18 (TO COMPATIBLE WITH BARCODE_SCAN (QR)  *EP72*
+//==================================================================================================      
+        minSdkVersion 18        
+        // minSdkVersion 16        
         
         targetSdkVersion 28
         versionCode flutterVersionCode.toInteger()
