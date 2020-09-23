@@ -1,3 +1,4 @@
+import './screens/Ep731Page.dart';
 import './screens/Ep721Page.dart';
 import './screens/Ep701Page.dart';
 import './screens/Ep711Page.dart';
@@ -162,6 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //============================================================
 // CREATE BUTTON
 //============================================================
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep731Page()),);},child: Text('EP73-1 - UI: Fill Passcode (mobile No)'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep721Page()),);},child: Text('EP72-1 - Open Table using QR Code'),), 
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep711Page()),);},child: Text('EP71-1 - Code UI: Open Table - Home Page'),), 
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep701Page()),);},child: Text('EP70-1 - Plan Project, Agile, Scrum,Jira'),), 
