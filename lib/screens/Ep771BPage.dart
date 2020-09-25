@@ -1,25 +1,23 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import '../models/Ep77OrderModel.dart';
 import '../singletons/GlobalAppData.dart';
 import '../screens/Ep531BPage.dart';
 import '../screens/Ep581Page.dart';
-//==================================================
-// EP63: STEP#1 IMPORT ORDER MODEL CLASS
-//==================================================
-import '../models/OrderModel.dart';
+
 
 //==================================================
 // MAIN CLASS
 //==================================================
-class Ep761BPage extends StatefulWidget {
+class Ep771BPage extends StatefulWidget {
   @override
-  _Ep761BPageState createState() => _Ep761BPageState();
+  _Ep771BPageState createState() => _Ep771BPageState();
 }
 
 //==================================================
 // STATE CLASS
 //==================================================
-class _Ep761BPageState extends State<Ep761BPage> {
+class _Ep771BPageState extends State<Ep771BPage> {
 //==================================================
 // DECLARE VARIABLE **EP54**
 //==================================================
@@ -50,7 +48,7 @@ String customerName = 'Mr.Nine';
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  Text('EP76-1B: Make Order',style: TextStyle(fontSize: 16),),
+                  Text('EP77-1B: Make Order',style: TextStyle(fontSize: 16),),
 //==================================================
 // EP56 STEP#2: STEAMBUILDER
 //================================================== 
@@ -317,30 +315,13 @@ final VoidCallback onTap;
                   RaisedButton(
                     color: Colors.blue,
                     onPressed: (){
+
 //==================================================
-// FUNCTION SAVE ORDER EP55
-//================================================== 
+// FUNCTION SAVE ORDER EP77
 //==================================================
-// EP#63 STEP#2 DECLARE ORDER MODEL VARIABLE WITH DATA
-//==================================================
-    OrderModel _orderModel = OrderModel(
-      menuId: menuId,
-      menuNameEng: title,
-      menuDescEng: description,
-      price: price,
-      orderNo: orderNo,
-      tableNo: tableNo,
-      customerName: customerName,
-      qty: 1,
-      // orderTime: DateTime.now(),
-      //status: 'ORDERING',
-      imageUrl: imageStr);
-//==================================================
-// EP#63 STEP#3 CALL SAVE ORDER FUNCTION
-//================================================== 
-      _orderModel.saveOrder();
-    
-// fnSaveOrder();                        
+      fnSaveOrderEP77();
+
+                       
                     }, child: Text('Order'),)
                 ],
               ),
@@ -351,41 +332,18 @@ final VoidCallback onTap;
   }
 
 //==================================================
-// FUNCTION SAVE ORDER EP55, EP56 STEP#1
+// FUNCTION SAVE ORDER EP77
 //================================================== 
-// fnSaveOrder(
-// ){
-//   Firestore.instance.collection('TT_ORDERS').document(orderNo + '|' + DateTime.now().millisecondsSinceEpoch.toString()).setData({
-//     'menuId': menuId,
-//     'menuNameEng': title,
-//     'menuDescEng': description,
-//     'price': price,    
-//     'orderNo': orderNo,
-//     'tableNo': tableNo,
-//     'customerName': customerName,
-//     'qty': 1,
-//     'orderTime': DateTime.now(),
-//     'status': 'ORDERING',
-//     'imageUrl': imageStr,
-// //==================================================
-// // THEN (IF SAVE COMPLETE)
-// //==================================================     
-//   }).then((value) {
-//     print('Save Complete');
-// //==================================================
-// // CATCH ERROR (IF ERROR)
-// //==================================================     
-//   }).catchError((error){
-//     print('Save Error $error');
-// //==================================================
-// // WHEN COMPLETE
-// //==================================================     
-//   }).whenComplete(() {
-//     print('When completed');
-//   });
-// }
+  fnSaveOrderEP77(){
+//==================================================
+// CALL FUNCTION
+//==================================================     
+    EP77OrderService.addOrderItemEP77(orderNo: globalAppData.orderNo,orderItemInfo: OrderItemInfo(menuId: menuId,menuNameEng: title,qty: 1,status: 'ORDER'),);
+  }// END FUNCTION
 
-}
+
+
+}// END CLASS
 
 //==================================================
 // CLASS FOOD CATEGORY

@@ -1,3 +1,4 @@
+import './screens/Ep771APage.dart';
 import './screens/Ep761APage.dart';
 import './screens/Ep751Page.dart';
 import './screens/Ep741Page.dart';
@@ -166,6 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //============================================================
 // CREATE BUTTON
 //============================================================
+            RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep771APage()),);},child: Text('EP77-1 - Make Order using mapping model (DB) '),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep761APage()),);},child: Text('EP76-1 - Pass Parameter: OrderNo, TableNo'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep751Page()),);},child: Text('EP75-1 - Logic: Save Customer Info for Open Table'),),
             RaisedButton(onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) => Ep741Page()),);},child: Text('EP74-1 - UI: Fill Customer Info for Open Table'),),
